@@ -1,0 +1,330 @@
+/* Variables de colores */
+/* Define variables CSS personalizadas para mantener consistencia en los colores */
+:root {
+    --primary-color: #FCD116;       /* Color primario (amarillo) */
+    --secondary-color: #003893;     /* Color secundario (azul oscuro) */
+    --accent-color: #CE1126;        /* Color de acento (rojo) */
+    --light-color: #f8f9fa;         /* Color claro (gris muy claro) */
+    --dark-color: #343a40;          /* Color oscuro (gris oscuro) */
+    --text-color: #333;             /* Color principal para texto */
+    --border-radius: 8px;           /* Radio de borde estándar */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra estándar */
+}
+
+/* Estilos generales */
+/* Reset básico para todos los elementos */
+* {
+    margin: 0;          /* Elimina márgenes por defecto */
+    padding: 0;         /* Elimina padding por defecto */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: 'Open Sans', sans-serif; /* Fuente principal */
+    color: var(--text-color);             /* Color de texto usando variable */
+    background-color: #f5f5f5;            /* Color de fondo gris claro */
+    line-height: 1.6;                     /* Espaciado entre líneas */
+}
+
+/* Estilos para todos los encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Fuente diferente para encabezados */
+    margin-bottom: 1rem;                  /* Espacio inferior */
+    color: var(--secondary-color);        /* Color usando variable secundaria */
+}
+
+/* Estilos para enlaces */
+a {
+    text-decoration: none;                /* Elimina subrayado por defecto */
+    color: var(--secondary-color);        /* Color usando variable */
+    transition: color 0.3s;               /* Transición suave para cambio de color */
+}
+
+/* Efecto hover para enlaces */
+a:hover {
+    color: var(--accent-color);           /* Cambia a color de acento al pasar mouse */
+}
+
+/* Estilos para imágenes */
+img {
+    max-width: 100%;      /* Hace imágenes responsivas */
+    height: auto;         /* Mantiene proporciones */
+    display: block;       /* Elimina espacio inferior por defecto */
+}
+
+/* Contenedor principal para centrar contenido */
+.container {
+    width: 90%;              /* Ancho relativo al viewport */
+    max-width: 1200px;       /* Ancho máximo */
+    margin: 0 auto;          /* Centra horizontalmente */
+    padding: 0 15px;         /* Padding lateral */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%); /* Degradado de colores */
+    color: white;            /* Texto blanco */
+    padding: 1.5rem 0;       /* Espaciado vertical */
+    text-align: center;      /* Centra texto */
+    width: 100%;             /* Ancho completo */
+    box-shadow: var(--box-shadow); /* Sombra usando variable */
+}
+
+/* Encabezado dentro del header */
+header h1 {
+    color: white;            /* Fuerza color blanco (sobrescribe herencia) */
+    font-size: 2.5rem;       /* Tamaño de fuente grande */
+    margin-bottom: 0.5rem;   /* Espacio inferior reducido */
+}
+
+/* Navegación */
+nav {
+    background-color: var(--light-color); /* Fondo claro */
+    padding: 1rem 0;         /* Espaciado vertical */
+    width: 100%;             /* Ancho completo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Lista de navegación */
+nav ul {
+    display: flex;           /* Diseño flexible para elementos en línea */
+    justify-content: center; /* Centra elementos horizontalmente */
+    list-style: none;        /* Elimina viñetas de lista */
+}
+
+/* Elementos de lista de navegación */
+nav ul li {
+    margin: 0 1.5rem;       /* Espaciado horizontal entre elementos */
+}
+
+/* Enlaces de navegación */
+nav ul li a {
+    font-weight: 600;        /* Texto en negrita */
+    font-size: 1.1rem;       /* Tamaño de fuente ligeramente mayor */
+    padding: 0.5rem 1rem;    /* Espaciado interno */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para fondo */
+}
+
+/* Efecto hover para enlaces de navegación */
+nav ul li a:hover {
+    background-color: rgba(0, 56, 147, 0.1); /* Fondo semitransparente al pasar mouse */
+}
+
+/* Contenido principal */
+main {
+    padding: 2rem 0;        /* Espaciado vertical */
+}
+
+/* Sección de introducción */
+.intro {
+    background-color: white;     /* Fondo blanco */
+    padding: 2rem;              /* Espaciado interno */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+    margin-bottom: 2rem;        /* Espacio inferior */
+    box-shadow: var(--box-shadow); /* Sombra */
+    text-align: center;         /* Texto centrado */
+}
+
+/* Párrafos de introducción */
+.intro p {
+    font-size: 1.1rem;          /* Tamaño de fuente ligeramente mayor */
+    max-width: 800px;           /* Ancho máximo para mejor legibilidad */
+    margin: 0 auto;             /* Centra el párrafo */
+}
+
+/* Tabla de noticias */
+.news-table {
+    width: 100%;                /* Ancho completo */
+    margin: 2rem 0;             /* Espaciado vertical */
+    border-collapse: collapse;  /* Elimina espacio entre bordes de celdas */
+    background-color: white;    /* Fondo blanco */
+    box-shadow: var(--box-shadow); /* Sombra */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+    overflow: hidden;           /* Oculta contenido que sobresale de bordes redondeados */
+}
+
+/* Celdas de tabla */
+.news-table th, .news-table td {
+    padding: 1rem;              /* Espaciado interno */
+    text-align: left;           /* Alineación izquierda de texto */
+    border-bottom: 1px solid #ddd; /* Borde inferior gris claro */
+}
+
+/* Encabezados de tabla */
+.news-table th {
+    background-color: var(--secondary-color); /* Fondo azul oscuro */
+    color: white;               /* Texto blanco */
+    font-weight: 600;           /* Texto en negrita */
+}
+
+/* Última fila de la tabla */
+.news-table tr:last-child td {
+    border-bottom: none;        /* Elimina borde inferior de última fila */
+}
+
+/* Efecto hover para filas de tabla */
+.news-table tr:hover {
+    background-color: rgba(0, 56, 147, 0.05); /* Fondo semitransparente al pasar mouse */
+}
+
+/* Contenedor de tarjetas de noticias */
+.news-cards {
+    display: grid;                              /* Usa CSS Grid para layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas responsivas */
+    gap: 2rem;                                  /* Espacio entre tarjetas */
+    margin: 2rem 0;                             /* Espaciado vertical */
+}
+
+/* Tarjetas individuales */
+.card {
+    background-color: white;                    /* Fondo blanco */
+    border-radius: var(--border-radius);        /* Bordes redondeados */
+    overflow: hidden;                           /* Oculta contenido que sobresale */
+    box-shadow: var(--box-shadow);              /* Sombra */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+/* Efecto hover para tarjetas */
+.card:hover {
+    transform: translateY(-5px);                /* Levanta ligeramente la tarjeta */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* Contenedor de imagen de tarjeta */
+.card-img {
+    height: 200px;              /* Altura fija */
+    overflow: hidden;           /* Oculta partes de imagen que sobresalgan */
+}
+
+/* Imagen dentro de tarjeta */
+.card-img img {
+    width: 100%;                /* Ancho completo del contenedor */
+    height: 100%;               /* Alto completo del contenedor */
+    object-fit: cover;          /* Recorta imagen para llenar contenedor */
+    transition: transform 0.5s; /* Transición suave para zoom */
+}
+
+/* Efecto hover para imagen de tarjeta */
+.card:hover .card-img img {
+    transform: scale(1.05);     /* Zoom ligero en la imagen */
+}
+
+/* Contenido de tarjeta */
+.card-content {
+    padding: 1.5rem;            /* Espaciado interno */
+}
+
+/* Encabezado de tarjeta */
+.card h3 {
+    margin-bottom: 0.5rem;      /* Espacio inferior reducido */
+    font-size: 1.3rem;          /* Tamaño de fuente */
+}
+
+/* Párrafo de tarjeta */
+.card p {
+    margin-bottom: 1rem;        /* Espacio inferior */
+    color: #666;                /* Color de texto gris */
+}
+
+/* Fecha en tarjeta */
+.card .date {
+    font-size: 0.9rem;          /* Tamaño de fuente pequeño */
+    color: #777;                /* Color de texto gris claro */
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--dark-color); /* Fondo oscuro */
+    color: white;               /* Texto blanco */
+    padding: 2rem 0;            /* Espaciado vertical */
+    width: 100%;                /* Ancho completo */
+    margin-top: 2rem;           /* Espacio superior */
+}
+
+/* Contenedor de contenido del footer */
+.footer-content {
+    display: flex;                      /* Diseño flexible */
+    justify-content: space-between;     /* Espacio entre elementos */
+    align-items: center;                /* Centra verticalmente */
+    flex-wrap: wrap;                    /* Permite que elementos se envuelvan */
+}
+
+/* Copyright */
+.copyright {
+    margin-bottom: 1rem;        /* Espacio inferior */
+}
+
+/* Enlaces sociales */
+.social-links {
+    display: flex;              /* Diseño flexible para alinear en horizontal */
+    gap: 1rem;                  /* Espacio entre iconos */
+}
+
+/* Enlaces sociales individuales */
+.social-links a {
+    color: white;               /* Color blanco */
+    font-size: 1.5rem;          /* Tamaño de fuente grande para iconos */
+}
+
+/* Efecto hover para enlaces sociales */
+.social-links a:hover {
+    color: var(--primary-color); /* Cambia a color primario al pasar mouse */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    /* Navegación en móviles */
+    nav ul {
+        flex-direction: column;     /* Apila elementos verticalmente */
+        align-items: center;        /* Centra elementos */
+    }
+    
+    /* Elementos de lista en móviles */
+    nav ul li {
+        margin: 0.5rem 0;          /* Espaciado vertical entre elementos */
+    }
+    
+    /* Footer en móviles */
+    .footer-content {
+        flex-direction: column;     /* Apila elementos verticalmente */
+        text-align: center;         /* Centra texto */
+    }
+    
+    /* Tarjetas en móviles */
+    .news-cards {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+}
+
+/* Estilos específicos para política */
+.destacado-politico {
+    background: linear-gradient(to right, rgba(252, 209, 22, 0.1), rgba(206, 17, 38, 0.1)); /* Degradado semitransparente */
+    border-left: 4px solid var(--accent-color); /* Borde izquierdo acentuado */
+    padding: 1.5rem;            /* Espaciado interno */
+    margin: 2rem 0;             /* Espaciado vertical */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+}
+
+/* Contador de elecciones */
+.election-countdown {
+    background-color: var(--secondary-color); /* Fondo azul oscuro */
+    color: white;               /* Texto blanco */
+    padding: 1.5rem;            /* Espaciado interno */
+    text-align: center;         /* Texto centrado */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+    margin: 2rem 0;             /* Espaciado vertical */
+}
+
+/* Encabezado en contador */
+.election-countdown h3 {
+    color: white;               /* Fuerza color blanco */
+}
+
+/* Número en contador */
+.countdown-number {
+    font-size: 2.5rem;          /* Tamaño de fuente muy grande */
+    font-weight: bold;          /* Texto en negrita */
+    color: var(--primary-color); /* Color amarillo para destacar */
+}
