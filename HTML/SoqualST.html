@@ -33,7 +33,7 @@
                         <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
                         <li><a href="Servicios.html" target="_blank"><i class="fas fa-cogs"></i> Servicios</a></li>
                         <li><a href="Nosotros.html" target="_blank"><i class="fas fa-users"></i> Nosotros</a></li>
-                        <li><a href=""><i class="fas fa-phone"></i> Contacto</a></li>
+                        <li><a href="Contacto.html" target="_blank"><i class="fas fa-phone"></i> Contacto</a></li>
                     </ul>
                 </nav>
             </div>
@@ -44,8 +44,33 @@
         <div class="container hero-content">
             <h2>Soporte Técnico Especializado en Tecnología</h2>
             <p>Soluciones integrales para computadores, aplicaciones, páginas web y sistemas de seguridad</p>
-            <a href="#contact" class="btn">Solicitar Soporte <i class="fas fa-arrow-right"></i></a>
+            <button id="abrirModalBtn" class="btn">Solicitar Soporte <i class="fas fa-arrow-right"></i></button>
         </div>
+        <!-- Ventana Modal para Términos y Condiciones -->
+    <div id="modalOverlay" class="overlay">
+        <div class="modal">
+            <h2>Términos y Condiciones</h2>
+            <div class="modal-content">
+                <p>Al solicitar nuestros servicios de soporte técnico, aceptas los siguientes términos y condiciones:</p>
+                <p>1. Los servicios están sujetos a disponibilidad y pueden requerir cita previa.</p>
+                <p>2. El tiempo de respuesta puede variar según la complejidad del problema y la carga de trabajo.</p>
+                <p>3. Soqual ST se reserva el derecho de modificar estos términos en cualquier momento.</p>
+                <p>4. Tu privacidad es importante para nosotros y protegemos tus datos según nuestra política de privacidad.</p>
+                <p>5. Para servicios de emergencia, aplican tarifas especiales fuera del horario laboral.</p>
+                <p>6. El cliente debe proporcionar un entorno seguro para que nuestros técnicos realicen su trabajo.</p>
+                <p>7. Soqual ST no se hace responsable por daños preexistentes en los equipos.</p>
+                <div class="terms-checkbox">
+                    <input type="checkbox" id="acceptTerms">
+                    <label for="acceptTerms">He leído y acepto los términos y condiciones</label>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button id="aceptarTerminosBtn" disabled>Aceptar y Continuar</button>
+                <button id="cerrarModalBtn">Cerrar</button>
+                
+        </div>
+    </div>
+    <script src="/JAVASCRIPT/script.js"></script>
     </section>
 
     <section class="services">
@@ -210,7 +235,6 @@
             </ul>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -226,13 +250,13 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contacto</h3>
-                    <p><i class="fas fa-phone"></i> Tel: (601) 234-5678</p>
-                    <p><i class="fas fa-envelope"></i> Email: info@soqualst.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Cra 45 #123-45, Bogotá</p>
+                    <p><i class="fas fa-phone"></i> Tel: 320-407-3004</p>
+                    <p><i class="fas fa-envelope"></i> Email: soqualst@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Cl 6B #6A-66, Soacha</p>
                 </div>
                 <div class="footer-section">
                     <h3>Horario de Atención</h3>
-                    <p><i class="fas fa-clock"></i> Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                    <p><i class="fas fa-clock"></i> Lunes a Viernes: 7:00 AM - 5:00 PM</p>
                     <p><i class="fas fa-clock"></i> Sábados: 9:00 AM - 2:00 PM</p>
                     <p><i class="fas fa-exclamation-circle"></i> Emergencias técnicas: 24/7</p>
                 </div>

@@ -1,3 +1,106 @@
+/* Estilos para la ventana modal */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal {
+            background-color: #003b5c;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideIn 0.3s ease;
+        }
+        
+        .modal h2 {
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .modal-content {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .modal-content p {
+            margin-bottom: 15px;
+        }
+        
+        .modal-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        #aceptarTerminosBtn {
+            background-color: #0066a1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        #aceptarTerminosBtn:hover {
+            background-color: #004d7a;
+        }
+        
+        #cerrarModalBtn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        #cerrarModalBtn:hover {
+            background-color: #c0392b;
+        }
+        
+        .visible {
+            display: flex !important;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .terms-checkbox {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .terms-checkbox input {
+            margin-right: 10px;
+        }
 * {
             margin: 0;
             padding: 0;

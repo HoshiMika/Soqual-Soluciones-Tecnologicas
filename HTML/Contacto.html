@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Soqual Soluciones Tecnológicas</title>
+    <link rel="stylesheet" href="/CSS/StyleContacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo">
+                    <div style="font-size: 2.5rem; margin-right: 15px;">🔧</div>
+                    <div>
+                        <h1>Soqual <span>Soluciones Tecnológicas</span></h1>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" onclick="window.close(); return false;"><i class="fas fa-home"></i> Inicio</a></li>
+                        <li><a href="Servicios.html"><i class="fas fa-cogs"></i> Servicios</a></li>
+                        <li><a href="Nosotros.html"><i class="fas fa-users"></i> Nosotros</a></li>
+                        <li><a href="contacto.html" class="active"><i class="fas fa-phone"></i> Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>Estamos aquí para ayudarte. Ponte en contacto con nosotros a través del formulario o utilizando cualquiera de nuestros medios de comunicación.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="intro">
+            <h2>Información de Contacto</h2>
+            <p>En esta página encontrarás nuestros datos de contacto, información de la empresa y un formulario para contactarnos directamente.</p>
+        </section>
+
+        <div class="info-grid">
+            <div class="contact-card">
+                <div class="profile-img">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3>Juan David Bayona</h3>
+                <p>Especialista en Soporte Técnico</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <p><strong>Teléfono:</strong></p>
+                            <p>+57 320 407 3004</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p><strong>Email:</strong></p>
+                            <p>jdbayona@ucompensar.edu.co</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="profile-img">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>Soqual ST</h3>
+                <p>Soluciones Tecnológicas</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p><strong>Ubicación:</strong></p>
+                            <p>Bogotá, Colombia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <p><strong>Horario:</strong></p>
+                            <p>Lun-Vie: 8:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="academic-info">
+            <h3><i class="fas fa-graduation-cap"></i> Formación Académica</h3>
+            <p><strong>Programa:</strong> Ingeniería de Software - Fundación Universitaria Compensar</p>
+            <p><strong>Curso Actual:</strong> Introducción a los Lenguajes de Internet - Desarrollo de aplicaciones web</p>
+        </section>
+
+        <section class="contact-form">
+            <h2>Formulario de Contacto</h2>
+            <p>Si deseas contactarnos, completa el siguiente formulario y nos pondremos en contacto contigo a la brevedad.</p>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Ingresa tu número de teléfono">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Asunto</label>
+                    <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Soqual ST</h3>
+                    <p>Soluciones Tecnológicas integrales para hogares y empresas en Colombia.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-phone"></i> Tel: +57 320 407 3004</p>
+                    <p><i class="fas fa-envelope"></i> Email: jdbayona@ucompensar.edu.co</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horario de Atención</h3>
+                    <p><i class="fas fa-clock"></i> Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                    <p><i class="fas fa-clock"></i> Sábados: 9:00 AM - 2:00 PM</p>
+                    <p><i class="fas fa-exclamation-circle"></i> Emergencias técnicas: 24/7</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Soqual Soluciones Tecnológicas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+        <script src="/JAVASCRIPT/scriptcontacto.js"></script>
+</body>
+</html>
