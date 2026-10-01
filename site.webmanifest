@@ -1,0 +1,13 @@
+{
+  "name": "Soqual Soluciones Tecnológicas",
+  "short_name": "Soqual ST",
+  "description": "Soporte técnico, aplicaciones, desarrollo web y cámaras de seguridad.",
+  "start_url": "HTML/SoqualST.html",
+  "display": "standalone",
+  "background_color": "#070b14",
+  "theme_color": "#00c2d1",
+  "lang": "es-CO",
+  "icons": [
+    { "src": "Imagenes/Logo.png", "sizes": "499x500", "type": "image/png", "purpose": "any" }
+  ]
+}

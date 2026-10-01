@@ -1,270 +1,363 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soqual ST - Soporte Técnico Especializado</title>
-    <link rel="stylesheet" href="/CSS/StyleInicio.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Enlace al archivo CSS externo para los estilos de la página -->
+    <title>Soqual ST · Soporte Técnico Especializado en Tecnología</title>
+    <meta name="description" content="Soporte técnico en computadores, aplicaciones, desarrollo web y cámaras de seguridad para hogares y empresas en Soacha y Bogotá. Atención remota y presencial, emergencias 24/7.">
+    <meta name="theme-color" content="#070b14">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:site_name" content="Soqual Soluciones Tecnológicas">
+    <meta property="og:title" content="Soqual ST · Soporte Técnico Especializado">
+    <meta property="og:description" content="Soluciones integrales para computadores, aplicaciones, páginas web y sistemas de seguridad.">
+    <meta property="og:image" content="../Imagenes/Logo%20Nuevo.png">
+    <link rel="icon" type="image/png" href="../Imagenes/Logo.png">
+    <link rel="apple-touch-icon" href="../Imagenes/Logo.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <script src="../JS/theme.js"></script>
+    <script src="../JS/main.js" defer></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Soqual Soluciones Tecnológicas",
+        "alternateName": "Soqual ST",
+        "description": "Soporte técnico en computadores, aplicaciones, desarrollo web y cámaras de seguridad.",
+        "foundingDate": "2020",
+        "telephone": "+57 320 407 3004",
+        "email": "soqualst@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Cl 6B #6A-66",
+            "addressLocality": "Soacha",
+            "addressRegion": "Cundinamarca",
+            "addressCountry": "CO"
+        },
+        "openingHours": ["Mo-Fr 07:00-17:00", "Sa 09:00-14:00"],
+        "sameAs": ["https://www.facebook.com/Soqualst"]
+    }
+    </script>
 </head>
 <body>
-    <!-- Barra superior con logo en miniatura -->
-    <div class="www-bar">
-        <div class=""></div>
-        <div class="social-mini">
-            <a href="https://www.facebook.com/Soqualst"><i class="fab fa-facebook-f"></i></a>
-            <!-- INSTAGRAM A UN NO FUNCIONAL <a href="#"><i class="fab fa-instagram"></i></a> -->
-            <a href="https://wa.me/message/5BKFE4JXYKZRD1"><i class="fab fa-whatsapp"></i></a>
-        </div>
-    </div>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
 
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <div class="logo">
-                    <img src="/Imagenes/Logo.png" alt="Soqual Logo">
-                    <div>
-                        <h1>Soqual <span>Soluciones Tecnológicas</span></h1>
-                    </div>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
-                        <li><a href="Servicios.html" target="_blank"><i class="fas fa-cogs"></i> Servicios</a></li>
-                        <li><a href="Nosotros.html" target="_blank"><i class="fas fa-users"></i> Nosotros</a></li>
-                        <li><a href="Contacto.html" target="_blank"><i class="fas fa-phone"></i> Contacto</a></li>
-                    </ul>
-                </nav>
+    <header class="site-header">
+        <div class="container nav-bar">
+            <a class="brand" href="SoqualST.html" aria-label="Soqual ST, ir al inicio">
+                <img src="../Imagenes/Logo.png" alt="" width="44" height="44">
+                <span class="brand-name">Soqual <small>Soluciones Tecnológicas</small></span>
+            </a>
+            <nav aria-label="Principal">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="SoqualST.html" aria-current="page"><i class="fas fa-house" aria-hidden="true"></i> Inicio</a></li>
+                    <li><a href="Servicios.html"><i class="fas fa-gears" aria-hidden="true"></i> Servicios</a></li>
+                    <li><a href="Nosotros.html"><i class="fas fa-users" aria-hidden="true"></i> Nosotros</a></li>
+                    <li><a href="Contacto.html"><i class="fas fa-phone" aria-hidden="true"></i> Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="icon-btn theme-toggle" type="button" aria-label="Cambiar tema">
+                    <i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i>
+                </button>
+                <a class="btn btn-sm nav-cta" href="Contacto.html">Cotizar</a>
+                <button class="icon-btn nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <h2>Soporte Técnico Especializado en Tecnología</h2>
-            <p>Soluciones integrales para computadores, aplicaciones, páginas web y sistemas de seguridad</p>
-            <button id="abrirModalBtn" class="btn">Solicitar Soporte <i class="fas fa-arrow-right"></i></button>
-        </div>
-        <!-- Ventana Modal para Términos y Condiciones -->
-    <div id="modalOverlay" class="overlay">
-        <div class="modal">
-            <h2>Términos y Condiciones</h2>
-            <div class="modal-content">
-                <p>Al solicitar nuestros servicios de soporte técnico, aceptas los siguientes términos y condiciones:</p>
-                <p>1. Los servicios están sujetos a disponibilidad y pueden requerir cita previa.</p>
-                <p>2. El tiempo de respuesta puede variar según la complejidad del problema y la carga de trabajo.</p>
-                <p>3. Soqual ST se reserva el derecho de modificar estos términos en cualquier momento.</p>
-                <p>4. Tu privacidad es importante para nosotros y protegemos tus datos según nuestra política de privacidad.</p>
-                <p>5. Para servicios de emergencia, aplican tarifas especiales fuera del horario laboral.</p>
-                <p>6. El cliente debe proporcionar un entorno seguro para que nuestros técnicos realicen su trabajo.</p>
-                <p>7. Soqual ST no se hace responsable por daños preexistentes en los equipos.</p>
-                <div class="terms-checkbox">
-                    <input type="checkbox" id="acceptTerms">
-                    <label for="acceptTerms">He leído y acepto los términos y condiciones</label>
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero">
+            <span class="hero-orb hero-orb--a" aria-hidden="true"></span>
+            <span class="hero-orb hero-orb--b" aria-hidden="true"></span>
+            <div class="container hero-grid">
+                <div class="reveal">
+                    <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Atención remota y presencial · Emergencias 24/7</span>
+                    <h1>Soporte técnico especializado en <span class="gradient-text">tecnología</span></h1>
+                    <p class="hero-lead">Soluciones integrales para computadores, aplicaciones, páginas web y sistemas de seguridad. Mantenemos tu hogar y tu empresa conectados y funcionando.</p>
+                    <div class="hero-actions">
+                        <button class="btn" type="button" data-open-terms>Solicitar soporte <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                        <a class="btn btn-ghost" href="Servicios.html">Ver servicios</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span><i class="fas fa-calendar-check" aria-hidden="true"></i> Desde 2020</span>
+                        <span><i class="fas fa-user-check" aria-hidden="true"></i> +100 clientes</span>
+                        <span><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> +500 equipos reparados</span>
+                    </div>
+                </div>
+                <div class="hero-visual reveal delay-2" aria-hidden="true">
+                    <div class="logo-ring">
+                        <img src="../Imagenes/Logo.png" alt="" width="499" height="500">
+                    </div>
+                    <span class="chip chip--1"><i class="fas fa-satellite-dish"></i> Diagnóstico remoto</span>
+                    <span class="chip chip--2"><i class="fas fa-shield-halved"></i> Ciberseguridad</span>
+                    <span class="chip chip--3"><i class="fas fa-bolt"></i> Respuesta rápida</span>
                 </div>
             </div>
-            <div class="modal-actions">
-                <button id="aceptarTerminosBtn" disabled>Aceptar y Continuar</button>
-                <button id="cerrarModalBtn">Cerrar</button>
-                
-        </div>
-    </div>
-    <script src="/JAVASCRIPT/script.js"></script>
-    </section>
+        </section>
 
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="/Imagenes/Soporte.avif" alt="Soporte en Computadores">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <h3>Soporte en Computadores</h3>
-                        <p>Reparación, mantenimiento y optimización de equipos de cómputo para hogares y empresas.</p>
-                    </div>
+        <!-- Servicios -->
+        <section class="section" aria-labelledby="servicios-title">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="kicker">Lo que hacemos</span>
+                    <h2 id="servicios-title">Nuestros servicios</h2>
+                    <p>Cuatro líneas de servicio pensadas para resolver cualquier necesidad tecnológica, de principio a fin.</p>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="/Imagenes/SoporteAplicaciones.avif" alt="Soporte en Aplicaciones">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
+                <div class="grid grid-4">
+                    <article class="card card--spotlight service-card reveal">
+                        <figure><img src="../Imagenes/Soporte.avif" alt="Técnico reparando un computador" loading="lazy" decoding="async"></figure>
+                        <div class="card-body">
+                            <span class="icon-badge"><i class="fas fa-laptop" aria-hidden="true"></i></span>
+                            <h3>Soporte en computadores</h3>
+                            <p>Reparación, mantenimiento y optimización de equipos de cómputo para hogares y empresas.</p>
+                            <a class="card-link" href="Servicios.html#computadores">Ver más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
-                        <h3>Soporte en Aplicaciones</h3>
-                        <p>Instalación, configuración y resolución de problemas en software y aplicaciones especializadas.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="/Imagenes/Desarrollo.avif" alt="Desarrollo Web">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-code"></i>
+                    </article>
+                    <article class="card card--spotlight service-card reveal delay-1">
+                        <figure><img src="../Imagenes/SoporteAplicaciones.avif" alt="Instalación de software en un portátil" loading="lazy" decoding="async"></figure>
+                        <div class="card-body">
+                            <span class="icon-badge"><i class="fas fa-mobile-screen" aria-hidden="true"></i></span>
+                            <h3>Soporte en aplicaciones</h3>
+                            <p>Instalación, configuración y resolución de problemas en software y aplicaciones especializadas.</p>
+                            <a class="card-link" href="Servicios.html#aplicaciones">Ver más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
-                        <h3>Desarrollo Web</h3>
-                        <p>Diseño y desarrollo de páginas web modernas, responsivas y optimizadas para SEO.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="/Imagenes/CCTV.avif" alt="Cámaras de Seguridad">
-                    </div>
-                    <div class="service-content">
-                        <div class="service-icon">
-                            <i class="fas fa-video"></i>
+                    </article>
+                    <article class="card card--spotlight service-card reveal delay-2">
+                        <figure><img src="../Imagenes/Desarrollo.avif" alt="Código de una página web en pantalla" loading="lazy" decoding="async"></figure>
+                        <div class="card-body">
+                            <span class="icon-badge"><i class="fas fa-code" aria-hidden="true"></i></span>
+                            <h3>Desarrollo web</h3>
+                            <p>Diseño y desarrollo de páginas web modernas, responsivas y optimizadas para SEO.</p>
+                            <a class="card-link" href="Servicios.html#web">Ver más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                         </div>
-                        <h3>Cámaras de Seguridad</h3>
-                        <p>Instalación y configuración de sistemas de videovigilancia para hogares y empresas.</p>
-                    </div>
+                    </article>
+                    <article class="card card--spotlight service-card reveal delay-3">
+                        <figure><img src="../Imagenes/CCTV.avif" alt="Cámara de seguridad instalada en una pared" loading="lazy" decoding="async"></figure>
+                        <div class="card-body">
+                            <span class="icon-badge"><i class="fas fa-video" aria-hidden="true"></i></span>
+                            <h3>Cámaras de seguridad</h3>
+                            <p>Instalación y configuración de sistemas de videovigilancia para hogares y empresas.</p>
+                            <a class="card-link" href="Servicios.html#seguridad">Ver más <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="countdown">
-        <div class="container countdown-content">
-            <h2>Oferta Especial por Tiempo Limitado</h2>
-            <p>Mantenimiento preventivo para computadores con 30% de descuento</p>
-            <div class="timer">Faltan 15 días para el fin de la promoción</div>
-            <a href="#promo" class="btn">Aprovechar Oferta <i class="fas fa-gift"></i></a>
-        </div>
-    </section>
-
-    <section class="news">
-        <div class="container">
-            <h2 class="section-title">Novedades Tecnológicas</h2>
-            
-            <table class="news-table">
-                <thead>
-                    <tr>
-                        <th>Título de la noticia</th>
-                        <th>Fecha</th>
-                        <th>Fuente</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Soqual ST anuncia nueva línea de soporte técnico remoto 24/7</td>
-                        <td>06/09/2025</td>
-                        <td>Soqual ST Blog</td>
-                    </tr>
-                    <tr>
-                        <td>Nuevas medidas de ciberseguridad para empresas Colombianas</td>
-                        <td>05/09/2025</td>
-                        <td>El Tiempo Tecnología</td>
-                    </tr>
-                    <tr>
-                        <td>Soqual ST obtiene certificación internacional en soporte técnico</td>
-                        <td>04/09/2025</td>
-                        <td>La República Digital</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <section class="analysis">
-        <div class="container">
-            <h2 class="section-title">Análisis Tecnológico</h2>
-            <div class="analysis-content">
-                <p>Según analistas del sector, la demanda de servicios de soporte técnico especializado ha crecido un 40% en el último año, con un aumento significativo en requerimientos de seguridad informática y transformación digital para pequeñas y medianas empresas.</p>
-                <p>Soqual ST se posiciona como una de las empresas con mayor crecimiento en el sector, gracias a su enfoque en soluciones personalizadas y respuesta inmediata a emergencias tecnológicas.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Excelente servicio técnico. Solucionaron todos los problemas de mi empresa de forma rápida y profesional. Muy recomendados.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MC</div>
-                        <div>
-                            <strong>María Camila</strong>
-                            <p>Directora de Tecnología</p>
-                        </div>
+        <!-- Promoción -->
+        <section class="section" id="promo" aria-labelledby="promo-title">
+            <div class="container">
+                <div class="promo reveal">
+                    <div>
+                        <span class="tag">Oferta por tiempo limitado</span>
+                        <h2 id="promo-title">Mantenimiento preventivo con <span class="gradient-text">30% de descuento</span></h2>
+                        <p>Limpieza interna, optimización del sistema y revisión completa de tu computador para que rinda como nuevo.</p>
+                        <a href="Contacto.html?servicio=Promoci%C3%B3n%20mantenimiento%20preventivo" class="btn">Aprovechar oferta <i class="fas fa-gift" aria-hidden="true"></i></a>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Llevo años confiando en Soqual para el mantenimiento de todos nuestros equipos. Siempre responden rápido y con soluciones efectivas.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JR</div>
-                        <div>
-                            <strong>Javier Rodríguez</strong>
-                            <p>Gerente de Sistemas</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Instalaron las cámaras de seguridad en mi negocio y quedé muy satisfecho con la calidad y el profesionalismo del equipo.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AC</div>
-                        <div>
-                            <strong>Ana Castillo</strong>
-                            <p>Propietaria de Restaurante</p>
-                        </div>
+                    <!-- Cambia la fecha de fin de la promoción aquí (formato ISO con zona horaria de Colombia) -->
+                    <div class="countdown" data-countdown-end="2026-10-15T23:59:59-05:00" role="timer" aria-label="Tiempo restante de la promoción">
+                        <div><strong data-unit="d">15</strong><span>Días</span></div>
+                        <div><strong data-unit="h">00</strong><span>Horas</span></div>
+                        <div><strong data-unit="m">00</strong><span>Min</span></div>
+                        <div><strong data-unit="s">00</strong><span>Seg</span></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="highlights">
-        <div class="container">
-            <h2 class="section-title">Servicios Destacados</h2>
-            <ul class="highlights-list">
-                <li>Soporte técnico remoto y presencial para empresas</li>
-                <li>Instalación y configuración de software especializado</li>
-                <li>Desarrollo de páginas web y aplicaciones a medida</li>
-                <li>Sistemas de vigilancia con monitoreo 24/7</li>
-                <li>Mantenimiento preventivo y correctivo de equipos</li>
-                <li>Consultoría en transformación digital para pymes</li>
-            </ul>
+        <!-- Novedades -->
+        <section class="section section--alt" aria-labelledby="news-title">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="kicker">Actualidad</span>
+                    <h2 id="news-title">Novedades tecnológicas</h2>
+                </div>
+                <ul class="news-list">
+                    <li class="card news-item reveal">
+                        <time datetime="2025-09-06">06<small>Sep 2025</small></time>
+                        <h3>Soqual ST anuncia nueva línea de soporte técnico remoto 24/7</h3>
+                        <span class="news-source">Soqual ST Blog</span>
+                    </li>
+                    <li class="card news-item reveal delay-1">
+                        <time datetime="2025-09-05">05<small>Sep 2025</small></time>
+                        <h3>Nuevas medidas de ciberseguridad para empresas colombianas</h3>
+                        <span class="news-source">El Tiempo Tecnología</span>
+                    </li>
+                    <li class="card news-item reveal delay-2">
+                        <time datetime="2025-09-04">04<small>Sep 2025</small></time>
+                        <h3>Soqual ST obtiene certificación internacional en soporte técnico</h3>
+                        <span class="news-source">La República Digital</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Análisis -->
+        <section class="section" aria-labelledby="analysis-title">
+            <div class="container split">
+                <div class="reveal">
+                    <span class="kicker">Análisis tecnológico</span>
+                    <p class="big-stat gradient-text">+40%</p>
+                    <h2 id="analysis-title">de crecimiento en la demanda de soporte técnico especializado</h2>
+                </div>
+                <div class="prose reveal delay-1">
+                    <p>Según analistas del sector, la demanda de servicios de soporte técnico especializado ha crecido un 40% en el último año, con un aumento significativo en requerimientos de seguridad informática y transformación digital para pequeñas y medianas empresas.</p>
+                    <p>Soqual ST se posiciona como una de las empresas con mayor crecimiento en el sector, gracias a su enfoque en soluciones personalizadas y respuesta inmediata a emergencias tecnológicas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section class="section section--alt" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="kicker">Testimonios</span>
+                    <h2 id="testimonials-title">Lo que dicen nuestros clientes</h2>
+                </div>
+                <div class="grid grid-3">
+                    <figure class="card testimonial reveal">
+                        <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+                        <blockquote>Excelente servicio técnico. Solucionaron todos los problemas de mi empresa de forma rápida y profesional. Muy recomendados.</blockquote>
+                        <figcaption class="author">
+                            <span class="avatar" aria-hidden="true">MC</span>
+                            <span><strong>María Camila</strong><span>Directora de Tecnología</span></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="card testimonial reveal delay-1">
+                        <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+                        <blockquote>Llevo años confiando en Soqual para el mantenimiento de todos nuestros equipos. Siempre responden rápido y con soluciones efectivas.</blockquote>
+                        <figcaption class="author">
+                            <span class="avatar" aria-hidden="true">JR</span>
+                            <span><strong>Javier Rodríguez</strong><span>Gerente de Sistemas</span></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="card testimonial reveal delay-2">
+                        <span class="stars" aria-label="5 de 5 estrellas">★★★★★</span>
+                        <blockquote>Instalaron las cámaras de seguridad en mi negocio y quedé muy satisfecha con la calidad y el profesionalismo del equipo.</blockquote>
+                        <figcaption class="author">
+                            <span class="avatar" aria-hidden="true">AC</span>
+                            <span><strong>Ana Castillo</strong><span>Propietaria de Restaurante</span></span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destacados -->
+        <section class="section" aria-labelledby="highlights-title">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="kicker">Por qué elegirnos</span>
+                    <h2 id="highlights-title">Servicios destacados</h2>
+                </div>
+                <ul class="pill-grid reveal">
+                    <li><i class="fas fa-headset" aria-hidden="true"></i> Soporte técnico remoto y presencial para empresas</li>
+                    <li><i class="fas fa-download" aria-hidden="true"></i> Instalación y configuración de software especializado</li>
+                    <li><i class="fas fa-laptop-code" aria-hidden="true"></i> Desarrollo de páginas web y aplicaciones a medida</li>
+                    <li><i class="fas fa-eye" aria-hidden="true"></i> Sistemas de vigilancia con monitoreo 24/7</li>
+                    <li><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Mantenimiento preventivo y correctivo de equipos</li>
+                    <li><i class="fas fa-chart-line" aria-hidden="true"></i> Consultoría en transformación digital para pymes</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="container reveal" aria-labelledby="cta-title">
+            <div class="cta-band">
+                <h2 id="cta-title">¿Tu equipo necesita ayuda ahora?</h2>
+                <p>Cuéntanos qué pasa y te damos un diagnóstico sin compromiso.</p>
+                <div class="hero-actions">
+                    <button class="btn" type="button" data-open-terms>Solicitar soporte</button>
+                    <a class="btn btn-ghost" href="https://wa.me/message/5BKFE4JXYKZRD1" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de términos y condiciones -->
+    <dialog class="modal" id="terms-modal" aria-labelledby="terms-title">
+        <div class="modal-header">
+            <h2 id="terms-title">Términos y condiciones</h2>
+            <button class="icon-btn" type="button" data-close-modal aria-label="Cerrar"><i class="fas fa-xmark" aria-hidden="true"></i></button>
         </div>
-    </section>
-    <footer>
+        <div class="modal-body">
+            <p>Al solicitar nuestros servicios de soporte técnico, aceptas los siguientes términos y condiciones:</p>
+            <ol>
+                <li>Los servicios están sujetos a disponibilidad y pueden requerir cita previa.</li>
+                <li>El tiempo de respuesta puede variar según la complejidad del problema y la carga de trabajo.</li>
+                <li>Soqual ST se reserva el derecho de modificar estos términos en cualquier momento.</li>
+                <li>Tu privacidad es importante para nosotros y protegemos tus datos según nuestra política de privacidad.</li>
+                <li>Para servicios de emergencia, aplican tarifas especiales fuera del horario laboral.</li>
+                <li>El cliente debe proporcionar un entorno seguro para que nuestros técnicos realicen su trabajo.</li>
+                <li>Soqual ST no se hace responsable por daños preexistentes en los equipos.</li>
+            </ol>
+            <label class="terms-check">
+                <input type="checkbox" id="accept-terms">
+                He leído y acepto los términos y condiciones
+            </label>
+        </div>
+        <div class="modal-actions">
+            <button class="btn btn-ghost btn-sm" type="button" data-close-modal>Cerrar</button>
+            <button class="btn btn-sm" type="button" data-accept-terms="Contacto.html" disabled>Aceptar y continuar</button>
+        </div>
+    </dialog>
+
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Soqual ST</h3>
-                    <p>Soluciones Tecnológicas integrales para hogares y empresas en Colombia.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a class="brand" href="SoqualST.html">
+                        <img src="../Imagenes/Logo.png" alt="" width="44" height="44" loading="lazy">
+                        <span class="brand-name">Soqual <small>Soluciones Tecnológicas</small></span>
+                    </a>
+                    <p>Soluciones tecnológicas integrales para hogares y empresas en Colombia.</p>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/Soqualst" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/message/5BKFE4JXYKZRD1" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <div class="footer-section">
+                <div>
+                    <h3>Navegación</h3>
+                    <ul class="footer-list">
+                        <li><a href="SoqualST.html">Inicio</a></li>
+                        <li><a href="Servicios.html">Servicios</a></li>
+                        <li><a href="Nosotros.html">Nosotros</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
                     <h3>Contacto</h3>
-                    <p><i class="fas fa-phone"></i> Tel: 320-407-3004</p>
-                    <p><i class="fas fa-envelope"></i> Email: soqualst@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Cl 6B #6A-66, Soacha</p>
+                    <ul class="footer-list">
+                        <li><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+573204073004">+57 320 407 3004</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:soqualst@gmail.com">soqualst@gmail.com</a></li>
+                        <li><i class="fas fa-location-dot" aria-hidden="true"></i><span>Cl 6B #6A-66, Soacha</span></li>
+                    </ul>
                 </div>
-                <div class="footer-section">
-                    <h3>Horario de Atención</h3>
-                    <p><i class="fas fa-clock"></i> Lunes a Viernes: 7:00 AM - 5:00 PM</p>
-                    <p><i class="fas fa-clock"></i> Sábados: 9:00 AM - 2:00 PM</p>
-                    <p><i class="fas fa-exclamation-circle"></i> Emergencias técnicas: 24/7</p>
+                <div>
+                    <h3>Horario</h3>
+                    <ul class="footer-list">
+                        <li><i class="fas fa-clock" aria-hidden="true"></i><span>Lun a Vie: 7:00 AM – 5:00 PM</span></li>
+                        <li><i class="fas fa-clock" aria-hidden="true"></i><span>Sábados: 9:00 AM – 2:00 PM</span></li>
+                        <li><i class="fas fa-triangle-exclamation" aria-hidden="true"></i><span>Emergencias técnicas: 24/7</span></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Soqual Soluciones Tecnológicas. Todos los derechos reservados.</p>
+                <p>&copy; <span data-year>2026</span> Soqual Soluciones Tecnológicas. Todos los derechos reservados.</p>
+                <p>Hecho en Colombia 🇨🇴</p>
             </div>
         </div>
     </footer>
+
+    <a class="fab-whatsapp" href="https://wa.me/message/5BKFE4JXYKZRD1" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
 </body>
 </html>
