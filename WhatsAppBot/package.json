@@ -1,0 +1,8 @@
+{
+  "name": "soqual-whatsapp-bot",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node prueba.mjs"
+  }
+}
