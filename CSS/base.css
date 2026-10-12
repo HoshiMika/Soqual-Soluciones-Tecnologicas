@@ -1,0 +1,424 @@
+/* ==========================================================================
+   base.css — Sistema de diseño compartido de Soqual
+   Se carga en TODAS las páginas, después de la hoja propia de cada página,
+   para unificar tipografía, colores, encabezado, pie de página y estados.
+   ========================================================================== */
+
+:root {
+  /* Neutros: un solo tono (tinta azul petróleo) para todos los grises */
+  --ink-950: #0b1f26;
+  --ink-900: #11303a;
+  --ink-700: #2e4d57;
+  --ink-500: #5a7279;
+  --ink-300: #a9b9bd;
+  --ink-200: #d3dddf;
+  --ink-100: #e8eeef;
+  --paper: #f6f8f7;
+  --white: #ffffff;
+
+  /* Un único acento, tomado del círculo turquesa del logo */
+  --accent: #0e9aa7;
+  --accent-strong: #0a7480; /* texto y enlaces sobre fondo claro (contraste AA) */
+  --accent-soft: #dff2f3;
+  --accent-on-dark: #5fd3dc;
+
+  --font-display: "Bricolage Grotesque", "Figtree", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 1px 2px rgba(11, 31, 38, 0.06), 0 2px 6px rgba(11, 31, 38, 0.05);
+  --shadow-md: 0 6px 16px -4px rgba(11, 31, 38, 0.12), 0 2px 4px rgba(11, 31, 38, 0.05);
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --container: 1200px;
+  --gutter: clamp(1.25rem, 4vw, 2rem);
+
+  /* Escala de capas */
+  --z-header: 50;
+  --z-overlay: 100;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Sin ::before/::after a propósito: así los iconos de Font Awesome
+   conservan su propia fuente. Le gana al "* { font-family: Segoe UI }"
+   que traen las hojas antiguas porque base.css se carga después. */
+* {
+  font-family: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink-900);
+  line-height: 1.6;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  accent-color: var(--accent);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+}
+
+p { text-wrap: pretty; }
+
+img { max-width: 100%; }
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink-950);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Enlace "saltar al contenido" para teclado */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: var(--z-overlay);
+  padding: 0.6rem 1rem;
+  background: var(--ink-950);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  transition: top 160ms var(--ease-out);
+}
+.skip-link:focus { top: 1rem; }
+
+/* ---------- Botones ---------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 48px;
+  padding: 0.75rem 1.35rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease,
+    transform 140ms var(--ease-out);
+}
+.button:active { transform: scale(0.97); }
+
+.button--primary {
+  background: var(--ink-950);
+  color: var(--white);
+}
+.button--primary:hover { background: var(--accent-strong); }
+
+.button--ghost {
+  background: transparent;
+  color: var(--ink-950);
+  border-color: var(--ink-300);
+}
+.button--ghost:hover {
+  border-color: var(--ink-950);
+}
+
+.text-link {
+  color: var(--accent-strong);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+  transition: text-decoration-color 200ms ease;
+}
+.text-link:hover { text-decoration-thickness: 2px; }
+
+/* ==========================================================================
+   Encabezado (inyectado por JS/ConexionPagina.js)
+   Los selectores son específicos para ganarle a los estilos antiguos
+   de header/nav que aún existen en las hojas de cada página.
+   ========================================================================== */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  padding: 0;
+  background: rgba(246, 248, 247, 0.86);
+  -webkit-backdrop-filter: saturate(160%) blur(12px);
+  backdrop-filter: saturate(160%) blur(12px);
+  border-bottom: 1px solid var(--ink-200);
+  box-shadow: none;
+  color: var(--ink-900);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 68px;
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--ink-950);
+  text-decoration: none;
+}
+.site-brand img {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+.site-brand__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+.site-brand__tagline {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ink-500);
+  letter-spacing: 0;
+}
+
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-nav li { margin: 0; }
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  color: var(--ink-700);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.site-nav a:hover {
+  color: var(--ink-950);
+  background: var(--ink-100);
+}
+.site-nav a[aria-current="page"] {
+  color: var(--ink-950);
+  font-weight: 600;
+  background: var(--accent-soft);
+}
+
+.site-nav .site-nav__cta {
+  margin-left: 0.5rem;
+  background: var(--ink-950);
+  color: var(--white);
+  gap: 0.45rem;
+}
+.site-nav .site-nav__cta:hover {
+  background: var(--accent-strong);
+  color: var(--white);
+}
+
+.site-nav__toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--ink-200);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  color: var(--ink-950);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .site-nav__toggle { display: inline-flex; }
+
+  .site-nav {
+    position: absolute;
+    inset: 100% 0 auto 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--ink-200);
+    box-shadow: var(--shadow-md);
+    padding: 0.5rem var(--gutter) 1.25rem;
+  }
+  .site-nav[hidden] { display: none; }
+
+  .site-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.15rem;
+    margin: 0;
+  }
+  .site-nav a {
+    width: 100%;
+    border-radius: var(--radius-md);
+    padding: 0.7rem 0.9rem;
+  }
+  .site-nav .site-nav__cta {
+    margin: 0.5rem 0 0;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 861px) {
+  .site-nav[hidden] { display: block; }
+}
+
+/* ==========================================================================
+   Pie de página (inyectado por JS/DatosContacto.js)
+   ========================================================================== */
+footer.site-footer {
+  background: var(--ink-950);
+  color: var(--ink-300);
+  padding: clamp(3rem, 6vw, 4.5rem) 0 2rem;
+  text-align: left;
+  margin-top: 0;
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.site-footer h2,
+.site-footer h3 {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  letter-spacing: 0;
+}
+
+.site-footer__brand p {
+  max-width: 34ch;
+  margin: 0 0 1.25rem;
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+.site-footer li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+}
+.site-footer li i {
+  width: 1rem;
+  color: var(--accent-on-dark);
+  font-size: 0.85rem;
+}
+
+.site-footer a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+.site-footer a:hover { color: var(--accent-on-dark); }
+
+.site-footer__social {
+  display: flex;
+  gap: 0.5rem;
+}
+.site-footer__social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--white);
+  margin: 0;
+  background: transparent;
+  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+.site-footer__social a:hover {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--ink-950);
+}
+
+.site-footer__hours dt { color: var(--white); font-weight: 500; }
+.site-footer__hours dd {
+  margin: 0 0 0.6rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.site-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  font-size: 0.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+@media (max-width: 760px) {
+  .site-footer__grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* Respeta a quien desactiva las animaciones en su sistema */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
