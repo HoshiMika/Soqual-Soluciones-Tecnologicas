@@ -427,6 +427,18 @@ select {
   }
 }
 
+/* Pantallas medianas: sin íconos ni botón "Cotizar" para que quepan los cinco enlaces */
+@media (min-width: 881px) and (max-width: 1100px) {
+  .nav-links a {
+    padding: 10px 11px;
+  }
+
+  .nav-links a i,
+  .nav-cta {
+    display: none;
+  }
+}
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -1853,6 +1865,299 @@ select {
     transform: scale(1.6);
     opacity: 0;
   }
+}
+
+/* ---------- Galería ---------- */
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.filter-btn {
+  min-height: 42px;
+  padding: 0.5em 1.15em;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: var(--border-strong);
+  color: var(--heading);
+}
+
+.filter-btn[aria-pressed='true'] {
+  border-color: transparent;
+  background: var(--gradient);
+  color: #00141a;
+  font-weight: 600;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+}
+
+.gallery-item {
+  padding: 0;
+  overflow: hidden;
+}
+
+.gallery-open {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  border: 0;
+  background: var(--bg-elev);
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.gallery-open img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.gallery-item:hover .gallery-open img {
+  transform: scale(1.06);
+}
+
+.gallery-play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  margin: auto;
+  border-radius: 50%;
+  background: rgba(3, 6, 12, 0.6);
+  color: #fff;
+  font-size: 1.3rem;
+  backdrop-filter: blur(4px);
+}
+
+.gallery-caption {
+  padding: 20px 22px 24px;
+}
+
+.gallery-caption h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.gallery-caption p {
+  font-size: 0.93rem;
+}
+
+.gallery-empty {
+  grid-column: 1 / -1;
+  padding: 40px 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* Visor (usa el estilo de .modal) */
+.lightbox {
+  width: min(100% - 32px, 960px);
+  max-height: 92dvh;
+}
+
+.lightbox-media img,
+.lightbox-media video {
+  width: 100%;
+  max-height: 70dvh;
+  object-fit: contain;
+  background: #000;
+}
+
+.lightbox-caption {
+  padding: 18px 26px 24px;
+  color: var(--text-muted);
+}
+
+.lightbox-error {
+  padding: 48px 26px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* ---------- Asistente virtual (chatbot) ---------- */
+.chat-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 92px;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--gradient);
+  color: #00141a;
+  font-size: 1.45rem;
+  cursor: pointer;
+  box-shadow: 0 14px 30px -10px rgba(0, 194, 209, 0.7);
+  transition: transform 0.3s var(--ease);
+}
+
+.chat-fab:hover {
+  transform: scale(1.08);
+}
+
+.chat-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 164px;
+  z-index: 95;
+  display: flex;
+  flex-direction: column;
+  width: min(100% - 32px, 380px);
+  height: min(540px, calc(100dvh - 188px));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-elev);
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  animation: modal-in 0.35s var(--ease);
+}
+
+.chat-panel[hidden] {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .chat-panel {
+    right: 16px;
+    left: 16px;
+    width: auto;
+  }
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.chat-header > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.chat-header h2 {
+  font-size: 1rem;
+}
+
+.chat-header small {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.chat-avatar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 194, 209, 0.2), rgba(124, 92, 255, 0.2));
+  box-shadow: inset 0 0 0 1px var(--border-strong);
+  color: var(--brand);
+}
+
+.chat-log {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.chat-msg {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 0.93rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.chat-msg--bot {
+  align-self: flex-start;
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 4px;
+  background: var(--surface-strong);
+}
+
+.chat-msg--user {
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+  background: var(--gradient);
+  color: #00141a;
+}
+
+.chat-msg.is-typing {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.chat-msg--error {
+  border-color: rgba(255, 107, 129, 0.5);
+}
+
+.chat-form {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.chat-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+}
+
+.chat-form input:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px rgba(0, 194, 209, 0.18);
+}
+
+.chat-form .btn {
+  flex: none;
+  width: 42px;
+  padding: 0;
+}
+
+.chat-note {
+  padding: 0 14px 12px;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--text-muted);
 }
 
 /* ---------- Página 404 ---------- */

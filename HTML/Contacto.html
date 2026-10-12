@@ -23,6 +23,7 @@
     <script src="../JS/theme.js"></script>
     <script src="../JS/main.js" defer></script>
     <script src="../JS/contacto.js" defer></script>
+    <script src="../JS/chatbot.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -38,6 +39,7 @@
                     <li><a href="SoqualST.html"><i class="fas fa-house" aria-hidden="true"></i> Inicio</a></li>
                     <li><a href="Servicios.html"><i class="fas fa-gears" aria-hidden="true"></i> Servicios</a></li>
                     <li><a href="Nosotros.html"><i class="fas fa-users" aria-hidden="true"></i> Nosotros</a></li>
+                    <li><a href="Galeria.html"><i class="fas fa-images" aria-hidden="true"></i> Galería</a></li>
                     <li><a href="Contacto.html" aria-current="page"><i class="fas fa-phone" aria-hidden="true"></i> Contacto</a></li>
                 </ul>
             </nav>
@@ -189,6 +191,7 @@
                         <li><a href="SoqualST.html">Inicio</a></li>
                         <li><a href="Servicios.html">Servicios</a></li>
                         <li><a href="Nosotros.html">Nosotros</a></li>
+                        <li><a href="Galeria.html">Galería</a></li>
                         <li><a href="Contacto.html">Contacto</a></li>
                     </ul>
                 </div>
@@ -215,6 +218,30 @@
             </div>
         </div>
     </footer>
+
+    <!-- Asistente virtual -->
+    <button class="chat-fab" type="button" data-chat-toggle aria-expanded="false" aria-controls="chat-panel" aria-label="Abrir asistente virtual">
+        <i class="fas fa-robot" aria-hidden="true"></i>
+    </button>
+    <section class="chat-panel" id="chat-panel" aria-labelledby="chat-title" hidden>
+        <div class="chat-header">
+            <span class="chat-avatar" aria-hidden="true"><i class="fas fa-robot"></i></span>
+            <div>
+                <h2 id="chat-title">Asistente Soqual</h2>
+                <small>Respuestas automáticas con IA</small>
+            </div>
+            <button class="icon-btn" type="button" data-chat-close aria-label="Cerrar asistente"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+        </div>
+        <div class="chat-log" aria-live="polite">
+            <p class="chat-msg chat-msg--bot">¡Hola! Soy el asistente de Soqual 🤖. Pregúntame sobre problemas con tu computador, aplicaciones, páginas web o cámaras de seguridad.</p>
+        </div>
+        <form class="chat-form">
+            <label class="visually-hidden" for="chat-input">Escribe tu pregunta</label>
+            <input id="chat-input" name="mensaje" type="text" maxlength="1000" autocomplete="off" placeholder="Escribe tu pregunta…" required>
+            <button class="btn btn-sm" type="submit" aria-label="Enviar"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+        </form>
+        <p class="chat-note">Asistente automático con Google Gemini: puede equivocarse y no guarda la conversación. No compartas datos personales. Para casos urgentes, escríbenos por WhatsApp.</p>
+    </section>
 
     <a class="fab-whatsapp" href="https://wa.me/message/5BKFE4JXYKZRD1" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
 </body>
